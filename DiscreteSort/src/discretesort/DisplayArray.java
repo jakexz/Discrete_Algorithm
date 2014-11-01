@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author Jakexz
  */
 public class DisplayArray {
-    private final Object array[];
+    protected Object array[];
     
     DisplayArray(Object array[]){ // constructor that handles the array from arrayGen or an array of your choosing
         this.array = array;

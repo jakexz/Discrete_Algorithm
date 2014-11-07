@@ -1,0 +1,8 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}Still need implement a license
+${licensePrefix}Don't know what to do
+<#if licenseLast??>
+${licenseLast}
+</#if>

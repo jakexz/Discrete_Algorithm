@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * What do?
+ * License?
+ * 
  */
 
 package discretesort;
@@ -17,15 +17,20 @@ public class DiscreteSort {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    	
-    	
-    	
+    	   	
     	// Begin - Section for Algorithm 6 -Greedy Change Maker 
 		String[] coins = { ".25", ".10", ".05", ".01" }; // Coin denominations
 		String[] value = { "0.81" };                     // $ amount to convert into coins		
 		String displayResult = greedyChangeMaker(coins, value);
+		// Temporary output display
 		System.out.println(displayResult);
 		// End - Section for Algorithm 6 -Greedy Change Maker 
+		
+       ArrayGen a1 = new ArrayGen(); 
+       a1.getArray(5);// TODO code application logic here
+       for(int i = 0; i < a1.arraySize; i++){
+           System.out.println(a1.intArray[i]);
+       }
     }
     
     // Algorithm 6 - Greedy Change Maker

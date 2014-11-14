@@ -12,13 +12,15 @@ import java.util.Scanner;
  * @author Jakexz
  */
 public class DisplayArray {
-    protected Object array[];
+    private Object array[];
     
     DisplayArray(Object array[]){ // constructor that handles the array from arrayGen or an array of your choosing
         this.array = array;
     }
+    DisplayArray(){}
+
     
-    public void display(){
+    public void display(Object array[]){
         System.out.println("This is you array unsorted");
         
         for(int i = 0; i < array.length ; i++){ //prints the elements one by one
@@ -41,7 +43,7 @@ public class DisplayArray {
         do{
             number = input.nextInt();
             selection(number);
-        }while(number > 1 || number < 7);
+        }while(number > 0 || number < 8);
         
         System.out.println("Here is your array after the operation"); //prints the array 
         for(int i = 0; i < array.length ; i++){ 
@@ -58,8 +60,11 @@ public class DisplayArray {
                     /*linear search*/ break;
                 case 3:
                     /*binary search*/ break;
-                case 4:
-                    /*bubble sort*/ break;
+                case 4://{
+                    
+                   // BubbleSort bubble = new BubbleSort(array);
+                    
+                   // break;}
                 case 5:
                     /*insertion sort*/ break;
                 case 6:

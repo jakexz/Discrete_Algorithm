@@ -27,10 +27,10 @@ public class DiscreteSort {
 		// End - Section for Algorithm 6 -Greedy Change Maker 
 		
        ArrayGen a1 = new ArrayGen(); 
-       a1.getArray(5);// TODO code application logic here
-       for(int i = 0; i < a1.arraySize; i++){
-           System.out.println(a1.intArray[i]);
-       }
+       Object[] array = a1.getArray(5,'i');// TODO code application logic here
+       DisplayArray disp = new DisplayArray(array);
+       disp.display(array);
+       
     }
     
     // Algorithm 6 - Greedy Change Maker

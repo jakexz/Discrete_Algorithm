@@ -9,5 +9,5 @@ Discrete_Algorithm
 <li>The Bubble Sort ---------------------------------- Hanane Stafford(annie942)</li>
 <li>The Insertion Sort -------------------------------</li>
 <li>Greedy Change-Making Algorithm-------------------- David Uchida(duchida)</li>
-<li>Greedy Algorithm for Scheduling Talks-------------</li>
+<li>Greedy Algorithm for Scheduling Talks-------------Brady Webb(bwebb94)</li>
 </ol>

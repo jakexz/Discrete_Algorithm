@@ -28,11 +28,15 @@ public class ArrayGen {
     protected Object[] getArray(char selec){ //does not take an array size 
         Random rand = new Random();
         Object array[] = new Object[rand.nextInt(20) + 1];
-        
+        //********** array generator*****please ignore*****//
+                
+        //create integer type array
         if(selec == 'i'){
             for(int i = 0; i < array.length;i++ ){
                 array[i] = rand.nextInt();
             }
+        
+        //create double type array
         }else if(selec == 'd'){
            for(int i = 0; i < array.length;i++ ){
                 array[i] = rand.nextDouble();
@@ -41,15 +45,18 @@ public class ArrayGen {
         
         return array;
     }
-    
+    //will take an array with your size specified
     protected Object[] getArray(int arraySize,char selec){
         Object[] array = new Object[arraySize];
         Random rand = new Random();
         
-        if(selec == 'i'){
+        //create integer type array
+        if(selec == 'i'){ 
             for(int i = 0; i < arraySize ;i++ ){
                 array[i] = rand.nextInt(100) + 1;
             }
+        
+        //create double type array
         }else if(selec == 'd'){
            for(int i = 0; i < arraySize ;i++ ){
                 array[i] = rand.nextDouble();

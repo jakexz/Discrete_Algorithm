@@ -6,7 +6,7 @@ Discrete_Algorithm
 <ol>Chapter 3 algorithm
 <li>Finding the Maximum Element in a Finite Sequence - Xiao Zhou(jakexz)</li>
 <li>The Linear Search Algorithm ---------------------- </li>
-<li>The Binary Search Algorithm ---------------------- </li>
+<li>The Binary Search Algorithm ---------------------- Jonathan Smart(lifeforce27)</li>
 <li>The Bubble Sort ---------------------------------- Hanane Stafford(annie942)</li>
 <li>The Insertion Sort ------------------------------- Nolan Brame(noe31)</li>
 <li>Greedy Change-Making Algorithm-------------------- David Uchida(duchida)</li>

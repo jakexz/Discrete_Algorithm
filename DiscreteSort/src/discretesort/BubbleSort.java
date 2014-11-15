@@ -65,8 +65,7 @@ public class BubbleSort
 		int[] values = { 6, 7, 1, 8, 4, 2 };
 		
 		// Create a String array with test values.
-		String[] names = { "Annie", "Abe", "John",
-	                          "Smith", "William", "Jennifer" };
+		String[] names = { "Annie", "Abe", "John","Smith", "William", "Jennifer" };
 	      
 	      
 		// Display the array's contents.

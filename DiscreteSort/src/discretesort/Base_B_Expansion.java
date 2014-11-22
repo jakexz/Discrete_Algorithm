@@ -87,7 +87,7 @@ public class Base_B_Expansion
        StringBuilder tempString = new StringBuilder();
        String finalString;
        String temp;
-       
+       // Hexadecimal needs to reform 
        if (base ==16)
        {
     	   while(div/base >= 1)

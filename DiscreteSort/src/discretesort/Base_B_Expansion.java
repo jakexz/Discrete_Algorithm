@@ -77,7 +77,7 @@ public class Base_B_Expansion
    }
    
     /*************************************************************************************
-	* Method that generates the b expansion based on user input
+	* Method that convert the number into the b base expansion 
 	*  
 	* @ return A string contains the Base b expansion
 	*************************************************************************************/
@@ -88,16 +88,24 @@ public class Base_B_Expansion
        String finalString;
        String temp;
        
-       while(div/base >= 1)
+       if (base ==16)
        {
-    	   temp = String.valueOf(div%base);
-    	   if(base == 16)
-    	   {
-    		   temp = HexadecimalFormer(temp);
-    	   }
-    	   div = div/base;
-    	   tempString.append(temp);
+    	   while(div/base >= 1)
+           {
+        	   temp = HexadecimalFormer(String.valueOf(div%base));       	   
+        	   div = div/base;
+        	   tempString.append(temp);
+           }
        }
+       else
+       {
+    	   while(div/base >= 1)
+           {
+        	   temp = String.valueOf(div%base);
+        	   div = div/base;
+        	   tempString.append(temp);
+           }
+       }       
 	   tempString.append(div);	   
 	   finalString =String.valueOf(tempString.reverse());
 	   String result = finalString+" is the base "+ base+" expansion of "+stringDiv;

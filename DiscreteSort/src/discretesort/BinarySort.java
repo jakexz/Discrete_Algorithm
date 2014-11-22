@@ -1,3 +1,4 @@
+package discretesort;
 import java.util.Scanner;
 
 public class BinarySort {

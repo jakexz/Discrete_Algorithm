@@ -35,20 +35,30 @@ public class DisplayArray {
                 + "\n\t5:Sort the array with insertion sort?"
                 + "\n\t6:Make change and keep it?"
                 + "\n\t7:Or schedule talks for no good reason?"
-                + "\nPlease enter a number between 1-7"
+                + "\n\t8:Construct a b base expansion?"
+                + "\nPlease enter a number between 1-8"
                     );
         
         Scanner input = new Scanner(System.in); //takes a number between 1 and 7 and do the operation accordingly
         int number;
-        do{
-            number = input.nextInt();
-            selection(number);
-        }while(number > 0 || number < 8);
-        
-        System.out.println("Here is your array after the operation"); //prints the array 
-        for(int i = 0; i < array.length ; i++){ 
-            System.out.print(array[i]+ ",");
+        number = input.nextInt();
+        // modified by Xiaoming  
+        //b base expansion doesn't need an array, instead, the class have the static method take care of the rest of steps.
+        if(number == 8)
+        {
+        	Base_B_Expansion.displayOption();
         }
+        else
+        {
+        	do{           
+                selection(number);
+            }while(number > 0 || number < 8);
+            
+            System.out.println("Here is your array after the operation"); //prints the array 
+            for(int i = 0; i < array.length ; i++){ 
+                System.out.print(array[i]+ ",");
+            }
+        }      
                   
     } 
     

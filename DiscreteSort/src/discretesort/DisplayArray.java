@@ -14,6 +14,7 @@ import java.util.Scanner;
 public class DisplayArray {
 	private static String array[];
 	private static int intArray[];
+	private static double dubArray[];
     
 	/********************** constructor that handles the array from arrayGen or an array of your choosing************/
 	DisplayArray(String array[]){ 
@@ -22,6 +23,10 @@ public class DisplayArray {
 
     DisplayArray(int intArray[]){
     	DisplayArray.setIntArray(intArray);
+    }
+    
+    DisplayArray(double dubArray[]){
+    	DisplayArray.setDubArray(dubArray);
     }
     
     DisplayArray(){}
@@ -51,18 +56,9 @@ public class DisplayArray {
         @SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in); //takes a number between 1 and 7 and do the operation accordingly
         int number= input.nextInt();
-        // modified by Xiaoming  
-        //b base expansion doesn't need an array, instead, the class have the static method take care of the rest of steps.
-        if(number == 8)
-        {
-        	Base_B_Expansion.displayOption();
-        }
-        else
-        {
-                selection(number);
-                number  = 0;
-            
-        }      
+
+        selection(number);
+                
                   
     } 
     
@@ -85,6 +81,9 @@ public class DisplayArray {
                     /*make change*/ break;
                 case 7:
                     /*schedule talk*/ break;
+                case 8:
+                	Base_B_Expansion.displayOption(); break; // modified by Xiaoming  
+                    //b base expansion doesn't need an array, instead, the class have the static method take care of the rest of steps.
                 default:{
                     System.out.println("Not in the range of selection");
                     break;
@@ -110,4 +109,13 @@ public class DisplayArray {
    public static void setIntArray(int intArray[]) {
 	   DisplayArray.array = ArrayGen.convertToStr(intArray);
    }
+   
+   public static double[] getDubArray() {
+	   return dubArray;
+   }
+
+   public static void setDubArray(double dubArray[]) {
+	   DisplayArray.array = ArrayGen.convertToStr(dubArray);
+   }
+   
 }

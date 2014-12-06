@@ -16,11 +16,15 @@ public class MaxElement {
 	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		ArrayGen intArray = new ArrayGen(5); //create an integer array of size 5
-		
 		DisplayArray disp = new DisplayArray(intArray.getIntArray());//Initialize DisplayArray class 
 		disp.display();
 		
+		ArrayGen doubleArray = new ArrayGen(2.0); //create a string array with selection key = integer
+		DisplayArray dispDouble = new DisplayArray(doubleArray.getDubArray());
+		dispDouble.display();
 	}
+	
+	
 	
 	
 	/**Find the max element in the array and return that array with max element at position 0***/
@@ -45,11 +49,11 @@ public class MaxElement {
             if(i < intArray.length-1 )
                 System.out.print(",");	
         }
-        System.out.print("}");
+        System.out.println("}");
 		
 		getMaxElement(intArray);
 		
-		System.out.print("\nHere is your array after the operation: " + "{"+ intArray[0]+ "}"); //prints the array 
+		System.out.println("Here is your array after the operation: " + "{"+ intArray[0]+ "}"); //prints the array 
 		
 	}
 	
@@ -81,11 +85,10 @@ public class MaxElement {
 	}
 	
 	protected static void displayMax(String strArray[]){
-
 		
 		getMaxElement(strArray);
 		
-		System.out.print("\nHere is your array after the operation: " + "{"+ strArray[0]+ "}"); //prints the array 
+		System.out.println("\nHere is your array after the operation: " + "{"+ strArray[0]+ "}"); //prints the array 
 		
 	}
 

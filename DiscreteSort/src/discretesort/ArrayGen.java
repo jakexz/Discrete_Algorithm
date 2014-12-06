@@ -16,6 +16,7 @@ public class ArrayGen {
 
     private static String[] strArray;
     private static int[] intArray;
+    private static double[] dubArray;
     private static char selec;
     //private static int arraySize;
 
@@ -24,12 +25,17 @@ public class ArrayGen {
     }
     
     ArrayGen(char selec){
-    	ArrayGen.setChar(selec);
+    	ArrayGen.setStrArray(selec);
     }
     
     
     ArrayGen(int arraySize){
     	ArrayGen.setIntArray(arraySize);
+    	
+    }
+    
+    ArrayGen(double arraySize){
+    	ArrayGen.setDubArray(arraySize);
     	
     }
     
@@ -163,8 +169,8 @@ public class ArrayGen {
 		return strArray;                                 //get String Array
 	}                                                    //
 
-	public static void setStrArray(String[] strArray) {  //
-		ArrayGen.strArray = strArray;                    //set String Array
+	public static void setStrArray(char selec) {         //
+		strArray = getArray(selec);                      //set String Array
 	}                                                    //
 	
 	public static int[] getIntArray() {                  //
@@ -172,14 +178,22 @@ public class ArrayGen {
 	}                                                    //
 
 	public static void setIntArray(int arraySize) {       //
-		intArray = getArray(arraySize);                    //set integer Array
+		intArray = getArray(arraySize);                   //set integer Array
 	}
 
-	public static char setChar() {
+	public static char getChar() {
 		return selec;
 	}
 
 	public static void setChar(char selec) {
 		ArrayGen.selec  = selec;
+	}
+	
+	public static double[] getDubArray() {                  //
+		return dubArray;                                    //get double Array
+	}                                                       //
+
+	public static void setDubArray(double arraySize) {       //
+		dubArray = getArray(arraySize);                 //set double Array
 	}
 }

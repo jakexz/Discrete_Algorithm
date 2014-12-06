@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author Jakexz
  */
 public class DisplayArray {
-    private Object array[];
+    private static Object array[];
     private static int intArray[];
     
     DisplayArray(Object array[]){ // constructor that handles the array from arrayGen or an array of your choosing
@@ -22,6 +22,7 @@ public class DisplayArray {
     DisplayArray(int intArray[]){
     	this.intArray = intArray;
     }
+    DisplayArray(){}
 
     
     public void display(Object array[]){
@@ -69,7 +70,7 @@ public class DisplayArray {
    protected static void selection(int number ){ //the bulk of the selection process
         switch(number){ //using the number input, it goes down the line and select the operation 
                 case 1:
-                    /*MaxElement.getMaxElement(intArray); */break;              //still need to implement algorithms
+                   /* MaxElement.displayMax(array);*/break;
                 case 2:
                     /*linear search*/ break;
                 case 3:

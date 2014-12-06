@@ -73,7 +73,7 @@ public class ArrayGen {
         //********** array generator*****please ignore*****//
                
             for(int i = 0; i < arraySize ;i++ ){
-                array[i] = rand.nextInt(); //assign a random int to array 
+                array[i] = rand.nextInt((200 +100) + 1) - 100; //assign a random int to array 
             }
         
         

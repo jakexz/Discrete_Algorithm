@@ -12,25 +12,29 @@ import java.util.Scanner;
  * @author Jakexz
  */
 public class DisplayArray {
-    private static Object array[];
-    private static int intArray[];
+	private static String array[];
+	private static int intArray[];
     
-    DisplayArray(Object array[]){ // constructor that handles the array from arrayGen or an array of your choosing
-        this.array = array;
+	/********************** constructor that handles the array from arrayGen or an array of your choosing************/
+	DisplayArray(String array[]){ 
+        DisplayArray.setArray(array);
     }
 
     DisplayArray(int intArray[]){
-    	this.intArray = intArray;
+    	DisplayArray.setIntArray(intArray);
     }
+    
     DisplayArray(){}
 
     
-    public void display(Object array[]){
-        System.out.println("This is you array unsorted");
-        
-        for(int i = 0; i < array.length ; i++){ //prints the elements one by one
-            System.out.print(array[i]+ ",");
+    public static void display(){
+        System.out.print("Here is your array before the operation: {");
+		for(int i = 0; i < array.length ; i++){ //prints the elements one by one
+            System.out.print(array[i]);
+            if(i < array.length-1 )
+                System.out.print(",");	
         }
+        System.out.print("}");
         
         System.out.println(  "\nWhat would you like to do?"                      //the selection menu
                 + "\n\t1:Finding the maximum element in a finite sequence?"
@@ -44,9 +48,9 @@ public class DisplayArray {
                 + "\nPlease enter a number between 1-8"
                     );
         
-        Scanner input = new Scanner(System.in); //takes a number between 1 and 7 and do the operation accordingly
-        int number;
-        number = input.nextInt();
+        @SuppressWarnings("resource")
+		Scanner input = new Scanner(System.in); //takes a number between 1 and 7 and do the operation accordingly
+        int number= input.nextInt();
         // modified by Xiaoming  
         //b base expansion doesn't need an array, instead, the class have the static method take care of the rest of steps.
         if(number == 8)
@@ -55,14 +59,9 @@ public class DisplayArray {
         }
         else
         {
-        	do{           
                 selection(number);
-            }while(number > 0 || number < 8);
+                number  = 0;
             
-            System.out.println("Here is your array after the operation"); //prints the array 
-            for(int i = 0; i < array.length ; i++){ 
-                System.out.print(array[i]+ ",");
-            }
         }      
                   
     } 
@@ -70,7 +69,7 @@ public class DisplayArray {
    protected static void selection(int number ){ //the bulk of the selection process
         switch(number){ //using the number input, it goes down the line and select the operation 
                 case 1:
-                   /* MaxElement.displayMax(array);*/break;
+                   MaxElement.displayMax(array);break;
                 case 2:
                     /*linear search*/ break;
                 case 3:
@@ -94,4 +93,21 @@ public class DisplayArray {
         
         
     }
+
+   /***********************Getters and setters****************************/
+   public static String[] getArray() {
+	   return array;
+   }
+
+   public static void setArray(String array[]) {
+	   DisplayArray.array = array;
+   }
+
+   public static int[] getIntArray() {
+	   return intArray;
+   }
+
+   public static void setIntArray(int intArray[]) {
+	   DisplayArray.array = ArrayGen.convertToStr(intArray);
+   }
 }

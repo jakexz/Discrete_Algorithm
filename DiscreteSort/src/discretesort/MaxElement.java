@@ -13,13 +13,13 @@ public class MaxElement {
 	 * @param args
 	 */
 	
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
-		 int myArray[] = ArrayGen.getArray(5);//create an int array 
-		 
-		// DisplayArray disp = new DisplayArray(myArray);//initialze DisplayArray class 
-		 /*disp.display(                          //print objArray 
-				 ArrayGen.convertToObj(myArray)); //convert array from int -> obj*/
-		 displayMax(myArray);
+		ArrayGen intArray = new ArrayGen(5); //create an integer array of size 5
+		
+		DisplayArray disp = new DisplayArray(intArray.getIntArray());//Initialize DisplayArray class 
+		disp.display();
+		
 	}
 	
 	
@@ -67,7 +67,7 @@ public class MaxElement {
 		
 	}
 	
-	protected String[] getMaxElement(String array[]){ //String 
+	protected static String[] getMaxElement(String array[]){ //String 
 	
 		String max = array[0]; //assign MAX as the first element
 		for(int i = 1; i < array.length; i++) //loop the thing until the end of array 
@@ -80,6 +80,13 @@ public class MaxElement {
 		
 	}
 	
-	
+	protected static void displayMax(String strArray[]){
+
+		
+		getMaxElement(strArray);
+		
+		System.out.print("\nHere is your array after the operation: " + "{"+ strArray[0]+ "}"); //prints the array 
+		
+	}
 
 }

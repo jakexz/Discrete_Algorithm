@@ -14,56 +14,71 @@ package discretesort;
 import java.util.Random;
 public class ArrayGen {
 
-    //constructor
+    private static String[] strArray;
+    private static int[] intArray;
+    private static char selec;
+    //private static int arraySize;
+
+	//constructor
     ArrayGen() {
+    }
+    
+    ArrayGen(char selec){
+    	ArrayGen.setChar(selec);
+    }
+    
+    
+    ArrayGen(int arraySize){
+    	ArrayGen.setIntArray(arraySize);
+    	
     }
     
 
    /*two variation of getArray
     you have a choice of returning choosing what array you want to return put 'd' for double or 'i' ,
-    if you care about the size of your array, input your arrary size first then what type
-    *by default the arraysize is 20
+    if you care about the size of your array, input your array size first then what type
+    *by default the array size is 20
     *int's in the array are limited to 1-100 
     */
-    protected static Object[] getArray(char selec){ //does not take an array size 
+    protected static String[] getArray(char selec){ //does not take an array size 
         Random rand = new Random();
-        Object array[] = new Object[rand.nextInt(20) + 1];
+        String array[] = new String[rand.nextInt(20) + 1];
         //********** array generator*****please ignore*****//
                 
-        //create integer type array
-        if(selec == 'i'){
-            for(int i = 0; i < array.length;i++ ){
-                array[i] = rand.nextInt();
+      //create integer type array
+        if(selec == 'i'){ 
+            for(int i = 0; i < array.length ;i++ ){
+                array[i] = String.valueOf(rand.nextInt(100) + 1);
             }
         
         //create double type array
         }else if(selec == 'd'){
-           for(int i = 0; i < array.length;i++ ){
-                array[i] = rand.nextDouble();
+           for(int i = 0; i < array.length ;i++ ){
+                array[i] = String.valueOf(rand.nextDouble());
             } 
         }
-        
         return array;
     }
+    
     //will take an array with your size specified
-    protected static Object[] getArray(int arraySize,char selec){
-        Object[] array = new Object[arraySize];
+    protected static String[] getArray(int arraySize,char selec){
+        String[] array = new String[arraySize];
         Random rand = new Random();
         
         //create integer type array
         if(selec == 'i'){ 
             for(int i = 0; i < arraySize ;i++ ){
-                array[i] = rand.nextInt(100) + 1;
+                array[i] = String.valueOf(rand.nextInt(100) + 1);
             }
         
         //create double type array
         }else if(selec == 'd'){
            for(int i = 0; i < arraySize ;i++ ){
-                array[i] = rand.nextDouble();
+                array[i] = String.valueOf(rand.nextDouble());
             } 
         }
         
-        return array;
+        return getStrArray();
     }
     
     /********************Integer Array Generator ************/
@@ -95,27 +110,76 @@ public class ArrayGen {
     }
    
     
-    /*************************array converter (int -> obj)**************************/
-    protected static Object[] convertToObj (int[] array){//converts int to obj
+    /*************************array converter (int -> string)**************************/
+    protected static String[] convertToStr (int[] array){//converts int to string
     	
-    	Object objArray[] = new Object[array.length]; //initialize object Array
+    	String strArray[] = new String[array.length]; //initialize object Array
     	for (int i = 0; i < array.length; i++) { //a for loop that assigns each int array to object
-    		objArray[i] = array[i];
+    		strArray[i] = String.valueOf(array[i]);
     	}
     	
-    	return objArray;
+    	return strArray;
     	
     }
     
-    /*************************array converter (obj -> int)**************************/
-    protected static int[] convertToInt (Object[] array){//converts obj to int
+    /*************************array converter (string -> int)**************************/
+    protected static int[] convertToInt (String[] array){//converts string to int
     	
     	int intArray[] = new int[array.length]; //initialize integer Array
     	for (int i = 0; i < array.length; i++) { //a for loop that assigns each object array to int
-    		intArray[i] = (int) array[i];
+    		intArray[i] = Integer.parseInt(array[i]);
     	}
     	
     	return intArray;
     	
     }
+    
+    /*************************array converter (double -> string)**************************/
+    protected static String[] convertToStr (double[] array){//converts double to string
+    	
+    	String strArray[] = new String[array.length]; //initialize object Array
+    	for (int i = 0; i < array.length; i++) { //a for loop that assigns each double array to object
+    		strArray[i] = String.valueOf(array[i]);
+    	}
+    	
+    	return strArray;
+    	
+    }
+    
+    /*************************array converter (string -> double)**************************/
+    protected static double[] convertToDud (String[] array){//converts string to double
+    	
+    	double dudArray[] = new double[array.length]; //initialize integer Array
+    	for (int i = 0; i < array.length; i++) { //a for loop that assigns each object array to double
+    		dudArray[i] = Integer.parseInt(array[i]);
+    	}
+    	
+    	return dudArray;
+    	
+    }
+
+    /****************************************setters and getters***************************/
+	public static String[] getStrArray() {               //
+		return strArray;                                 //get String Array
+	}                                                    //
+
+	public static void setStrArray(String[] strArray) {  //
+		ArrayGen.strArray = strArray;                    //set String Array
+	}                                                    //
+	
+	public static int[] getIntArray() {                  //
+		return intArray;                                 //get integer Array
+	}                                                    //
+
+	public static void setIntArray(int arraySize) {       //
+		intArray = getArray(arraySize);                    //set integer Array
+	}
+
+	public static char setChar() {
+		return selec;
+	}
+
+	public static void setChar(char selec) {
+		ArrayGen.selec  = selec;
+	}
 }

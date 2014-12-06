@@ -13,11 +13,15 @@ import java.util.Scanner;
  */
 public class DisplayArray {
     private Object array[];
+    private static int intArray[];
     
     DisplayArray(Object array[]){ // constructor that handles the array from arrayGen or an array of your choosing
         this.array = array;
     }
-    DisplayArray(){}
+
+    DisplayArray(int intArray[]){
+    	this.intArray = intArray;
+    }
 
     
     public void display(Object array[]){
@@ -62,10 +66,10 @@ public class DisplayArray {
                   
     } 
     
-   protected Object[] selection(int number ){ //the bulk of the selection process
+   protected static void selection(int number ){ //the bulk of the selection process
         switch(number){ //using the number input, it goes down the line and select the operation 
                 case 1:
-                    /*find max*/ break;              //still need to implement algorithms
+                    /*MaxElement.getMaxElement(intArray); */break;              //still need to implement algorithms
                 case 2:
                     /*linear search*/ break;
                 case 3:
@@ -86,6 +90,7 @@ public class DisplayArray {
                     break;
                 }
         }
-        return array;
+        
+        
     }
 }

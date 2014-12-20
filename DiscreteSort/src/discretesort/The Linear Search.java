@@ -1,4 +1,4 @@
-
+package discretesort;
 
 import java.util.Scanner;
  

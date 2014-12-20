@@ -3,7 +3,7 @@
  * CS942 Discrete Structures
  * Fall 2014
  */
-package matrixmultiplication;
+package discretesort;
 import java.util.Scanner;
 /**
  *

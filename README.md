@@ -20,7 +20,6 @@ Discrete_Algorithm
 #### Current Project role ####
 *   Yuen Yuen(yywlac) - Projeoct coordinator  
 *   Xiao Zhou(jakexz) - Ze Capt'n  
-*   Hanane Stafford(annie942) -  
-*   David Uchida(duchida) -  
+*   Hanane Stafford(annie942) -  Content coordinator
 
     

@@ -13,7 +13,7 @@ Discrete_Algorithm
 <li>Greedy Algorithm for Scheduling Talks------------- Brady Webb(bwebb94)</li>
 </ol>
 <ol>Chapter 4 algorithm
-<li>Unspecified--------------------------------------- Xiaoming Chan(kevincxm)</li>
+<li>Binary Sort--------------------------------------- Xiaoming Chan(kevincxm)</li>
 <li>Matrix Multiplication Algorithm------------------- Luis Murillo</li>
 </ol>
 
